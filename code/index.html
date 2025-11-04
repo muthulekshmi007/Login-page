@@ -1,0 +1,71 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.css" />
+  <script src="login.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="login-container">
+      <h1 class="login-title">Login</h1>
+
+      <div class="input-box">
+        
+        <input type="text" placeholder="Username" id="username" />
+      </div>
+
+      <div class="input-box">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Password" id="password"/>
+      </div>
+
+      <a href="#" class="forgot-password">Forgot password?</a>
+
+      <button class="login-btn"  onclick="window.location.href='login.html'">Login</button>
+  
+
+      <div class="divider">
+        <hr /><span>or</span><hr />
+      </div>
+
+      
+      <!-- Social Login Buttons -->
+    <div class="social-login">
+      <button class="google-btn">
+        <img src="google.png" alt="Google"> 
+      </button>
+      <button class="facebook-btn">
+        <img src="facebook.png" alt="Facebook"> 
+      </button>
+    </div>
+    
+  </div>
+    </div>
+  </div>
+</body>
+<script>document.querySelector(".login-btn").addEventListener("click", () => {
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (!username || !password) {
+    alert("Please enter both username and password!");
+    return;
+  }
+
+  // Dummy login check (you can connect to real backend later)
+  if (username === "admin" && password === "1234") {
+    alert("Login Successful!");
+  } else {
+    alert("Invalid credentials. Try again!");
+  }
+});
+</script>
+</html>
+
+
